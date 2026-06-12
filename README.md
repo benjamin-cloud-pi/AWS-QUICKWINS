@@ -23,16 +23,15 @@ Cada QuickWin se trabaja siguiendo estos 5 pasos:
 
 | # | Dominio | QuickWins | Estado |
 |---|---------|-----------|--------|
-| 01 | [Gobierno de la seguridad](./01-gobierno-seguridad/) | Contactos de seguridad · Selección de regiones | ⬜ |
-| 02 | [Aseguramiento de la seguridad](./02-aseguramiento-seguridad/) | Evaluar postura de seguridad (CSPM / Security Hub) | ⬜ |
-| 03 | [Gestión de identidades y accesos](./03-identidades-accesos/) | MFA · Protección Root · Federación · Limpieza de accesos | ⬜ |
-| 04 | [Detección de amenazas](./04-deteccion-amenazas/) | GuardDuty · CloudTrail · Alarma de Billing | ⬜ |
-| 05 | [Gestión de vulnerabilidades](./05-gestion-vulnerabilidades/) | Inspector | ⬜ |
-| 06 | [Protección de la infraestructura](./06-proteccion-infraestructura/) | Limpieza de Security Groups / puertos riesgosos | ⬜ |
-| 07 | [Protección de datos](./07-proteccion-datos/) | S3 Block Public Access · Macie | ⬜ |
-| 08 | [Seguridad de las aplicaciones](./08-seguridad-aplicaciones/) | WAF con reglas gestionadas | ⬜ |
-| 09 | [Respuesta a incidentes](./09-respuesta-incidentes/) | Actuar ante hallazgos críticos | ⬜ |
-| 10 | [Resiliencia](./10-resiliencia/) | Evaluar resiliencia | ⬜ |
+| 01 | [Gobierno de la seguridad](./01-gobierno-seguridad/) | Contactos de seguridad · Selección de regiones | 
+| 02 | [Aseguramiento de la seguridad](./02-aseguramiento-seguridad/) | Evaluar postura de seguridad (CSPM / Security Hub) |  
+| 03 | [Gestión de identidades y accesos](./03-identidades-accesos/) | MFA · Protección Root · Federación · Limpieza de accesos | 
+| 04 | [Detección de amenazas](./04-deteccion-amenazas/) | GuardDuty · CloudTrail · Alarma de Billing | 
+| 05 | [Gestión de vulnerabilidades](./05-gestion-vulnerabilidades/) | Inspector | 
+| 06 | [Protección de la infraestructura](./06-proteccion-infraestructura/) | Limpieza de Security Groups / puertos riesgosos | 
+| 07 | [Protección de datos](./07-proteccion-datos/) | S3 Block Public Access · Macie | 
+| 08 | [Seguridad de las aplicaciones](./08-seguridad-aplicaciones/) | WAF con reglas gestionadas | 
+| 09 | [Respuesta a incidentes](./09-respuesta-incidentes/) | Actuar ante hallazgos críticos | 
 
 ---
 
@@ -123,25 +122,8 @@ aws-security-quickwins/
 
 Visión global de cómo se conectan los servicios de seguridad entre sí:
 
-```mermaid
-graph LR
-    IAM -->|autentica/autoriza| EC2
-    IAM -->|autentica/autoriza| S3
-    IAM -->|MFA Delete| S3
-    CloudTrail -->|registra llamadas API de| IAM
-    CloudTrail -->|registra llamadas API de| EC2
-    CloudTrail -->|logs almacenados en| S3
-    GuardDuty -->|analiza logs de| CloudTrail
-    GuardDuty -->|analiza logs de| VPCFlowLogs
-    SecurityHub -->|agrega hallazgos de| GuardDuty
-    SecurityHub -->|agrega hallazgos de| Inspector
-    SecurityHub -->|agrega hallazgos de| Macie
-    WAF -->|protege| ALB
-    WAF -->|protege| CloudFront
-    SecurityGroups -->|controla tráfico de| EC2
-    Macie -->|analiza datos en| S3
-    BillingAlarm -->|usa| CloudWatch
-```
+![alt text](image.png)
+
 
 > 📌 Este diagrama se irá ampliando a medida que avancemos con cada dominio.
 
