@@ -21,8 +21,8 @@ Cada QuickWin se trabaja siguiendo estos 5 pasos:
 
 ## Contenido
 
-| # | Dominio | QuickWins | Estado |
-|---|---------|-----------|--------|
+| # | Dominio | QuickWins | 
+|---|---------|-----------|
 | 01 | [Gobierno de la seguridad](./01-gobierno-seguridad/) | Contactos de seguridad · Selección de regiones | 
 | 02 | [Aseguramiento de la seguridad](./02-aseguramiento-seguridad/) | Evaluar postura de seguridad (CSPM / Security Hub) |  
 | 03 | [Gestión de identidades y accesos](./03-identidades-accesos/) | MFA · Protección Root · Federación · Limpieza de accesos | 
