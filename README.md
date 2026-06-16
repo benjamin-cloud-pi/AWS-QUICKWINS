@@ -125,7 +125,6 @@ Visión global de cómo se conectan los servicios de seguridad entre sí:
 ![alt text](image.png)
 
 
-> 📌 Este diagrama se irá ampliando a medida que avancemos con cada dominio.
 
 ---
 
@@ -166,23 +165,10 @@ Cada archivo `.md` de un QuickWin sigue esta estructura:
 ## ⌨️ 5. CLI + Terraform
 > Comandos y código en `cli-terraform/`
 
-## 📌 Notas personales
-> Dudas, lo que me costó, links útiles.
-```
+
 
 ---
 
-## 🚀 Orden de estudio recomendado
-
-1. **03 - Identidades y accesos** → IAM es la base de todo en AWS
-2. **01 - Gobierno de la seguridad** → Configuraciones base de la cuenta
-3. **04 - Detección de amenazas** → CloudTrail + GuardDuty
-4. **06 - Protección de la infraestructura** → Security Groups
-5. **07 - Protección de datos** → S3 BPA + Macie
-6. **02 - Aseguramiento** → Security Hub (agrega todo lo anterior)
-7. **05, 08, 09, 10** → Resto de dominios
-
----
 
 ## 📖 Referencia
 
